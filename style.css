@@ -1,0 +1,22 @@
+body{
+    overflow: auto;
+}
+#game-box, #game-details-box{
+    padding-top: 60px !important;
+}
+#game-details-box{
+    display: none;
+    position: relative;
+}
+#close-btn{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+.active{
+    background-color: rgba(240, 255, 255, 0.81) !important;
+    color: black !important;
+}
+#navbar{
+    z-index: 10;
+}

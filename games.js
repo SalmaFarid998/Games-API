@@ -11,7 +11,6 @@ async function getGames(category){
             'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
         }
     }
-    console.log(category)
     if(category == undefined){
         category = "sailing"
     }
@@ -23,7 +22,7 @@ async function getGames(category){
 }
 
 
-async function getDetails(){
+async function getDetails(id){
     const options = {
         method: 'GET',
         headers: {
@@ -32,6 +31,8 @@ async function getDetails(){
         }
     }
 
-    let response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=452`, options)
+    let response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`, options)
     let finalResponse = await response.json()
+    console.log("getting details done")
+    return finalResponse
 }
